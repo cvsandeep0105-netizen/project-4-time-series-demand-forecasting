@@ -147,3 +147,55 @@ Multi-product and multi-warehouse forecasting
 Author
 Venkata Sandeep Kumar Reddy
 Aspiring Data Scientist / Machine Learning Engineer
+
+
+
+---
+
+## 📊 Business Impact
+
+This forecasting system is designed for real-world supply chain and operations teams.
+
+**Business value:**
+- Reduces overstocking by improving monthly demand accuracy
+- Helps prevent stockouts during high-demand periods
+- Enables data-driven procurement and inventory planning
+
+**Who uses this forecast:**
+- Supply Chain Managers
+- Inventory Planners
+- Operations & Procurement Teams
+
+**Risk handling:**
+- Forecast confidence intervals help decision-makers plan buffer stock
+- Time-aware validation prevents future data leakage
+
+---
+
+## 📈 Model Comparison Summary
+
+| Model     | RMSE        | Interpretation |
+|----------|-------------|----------------|
+| Naive Baseline | High | Unsafe for planning |
+| ARIMA | Medium | Captures trend only |
+| SARIMAX | Lowest | Best for seasonal demand |
+
+SARIMAX was selected as the final model due to its superior generalization on unseen data.
+
+---
+
+## 🚀 Production Readiness Notes
+
+- Time-aware train-test split used
+- Seasonal effects explicitly modeled
+- Designed for extension to:
+  - Multiple products
+  - Multiple warehouses
+  - API or dashboard deployment
+
+  ## Results Summary
+- Model: SARIMAX (1,1,1)(1,1,1,12)
+- Evaluation Metric: RMSE
+- Observation: SARIMAX captured overall trend and seasonality.
+- Limitation: Small dataset reduces forecast responsiveness.
+- Conclusion: Suitable for short-term demand planning.
